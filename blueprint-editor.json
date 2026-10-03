@@ -1,0 +1,51 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "KBRT website demo (editor)",
+    "author": "John McDonald",
+    "description": "Demonstration of the redesigned Kevin Bell Repatriation Trust website, with a working demo shop."
+  },
+  "landingPage": "/wp-admin/site-editor.php",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/john-mcdonald-ie/kbrt-website-demo/main/kbrt-theme.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/kbrt-demo-setup.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/john-mcdonald-ie/kbrt-website-demo/main/setup.php"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; require '/wordpress/kbrt-demo-setup.php';"
+    }
+  ]
+}
