@@ -7,10 +7,11 @@ each visit starts a fresh copy.
 * **View the site:** https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/john-mcdonald-ie/kbrt-website-demo/main/blueprint.json
 * **View the editor (logged in):** https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/john-mcdonald-ie/kbrt-website-demo/main/blueprint-editor.json
 
-The first load takes around 30 to 60 seconds while WordPress and WooCommerce start.
+The first load can take up to 90 seconds while WordPress and WooCommerce start.
 
 The shop is a demonstration: the payment option is labelled "Demo payment" and no money is taken.
 Donation buttons link to the Trust's real iDonate, PayPal and JustGiving pages.
+The call-back, contact and sterling donation forms are demonstrations: they show a thank-you message and send nothing.
 
 Files:
 

@@ -16,6 +16,10 @@
   "login": false,
   "steps": [
     {
+      "step": "setSiteLanguage",
+      "language": "en_GB"
+    },
+    {
       "step": "installPlugin",
       "pluginData": {
         "resource": "wordpress.org/plugins",
